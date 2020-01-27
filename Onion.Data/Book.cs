@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Onion.Data
 {
-    public class BookEntity : BaseAuditClass
+    public class Book : BaseAuditClass
     {
         public int ordinal { get; set; }
         public string name { get; set; }

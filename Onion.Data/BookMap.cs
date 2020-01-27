@@ -8,7 +8,7 @@ namespace Onion.Data
 {
     public class BookMap
     {
-        public BookMap(EntityTypeBuilder<BookEntity> entityBuilder)
+        public BookMap(EntityTypeBuilder<Book> entityBuilder)
         {
             entityBuilder.HasKey(k => k.id);
         }

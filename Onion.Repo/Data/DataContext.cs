@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Onion.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,10 @@ namespace Onion.Repo.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            new BookMap(modelBuilder.Entity<Book>().ToTable("Books"));
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<Book> Books { get; set; }
     }
 }
